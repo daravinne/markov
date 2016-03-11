@@ -20,6 +20,7 @@ class Markov:
 
     def train(self, training_data):
         prev = ()
+        print("begin training...")
         for token in training_data:
             token = sys.intern(token)
             for pprev in [prev[i:] for i in range(len(prev) + 1)]:
